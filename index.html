@@ -16,6 +16,86 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #fff5f8, #ffe4ec);
   color: #333;
+  margin: 0;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  border-bottom: 1px solid #ffd6e7;
+  position: sticky;
+  top: 0;
+  background: #fff5f8;
+}
+
+nav h2 {
+  color: #ff4da6;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a:hover {
+  color: #ff4da6;
+  transition: 0.3s;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+}
+
+/* AVATAR */
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb6d9;
+  box-shadow: 0 0 20px #ffb6d9;
+  transition: 0.3s;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.intro h1 {
+  font-size: 32px;
+}
+
+.intro p {
+  color: #777;
+}
+
+/* SECTION */
+section {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* TITLE */
+h3 {
+  font-size: 22px;
+  color: #ff4da6;
+}
+
+.line {
+  width: 40px;
+  height: 3px;
+  background: #ffb6d9;
+  margin: 10px 0 20px;
 }
 
 /* CARD */
@@ -31,16 +111,9 @@ body {
   animation: fadeIn 0.8s forwards;
 }
 
-/* HOVER */
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.01);
   transition: 0.3s;
-}
-
-/* TITLE */
-h3 {
-  font-size: 22px;
-  color: #ff4da6;
 }
 
 /* TAG */
@@ -54,27 +127,30 @@ h3 {
   font-size: 14px;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #ffb6d9;
-  color: white;
-  border-radius: 10px;
+/* LINK */
+a.link {
+  display: block;
+  margin: 5px 0;
+  color: #ff4da6;
   text-decoration: none;
 }
 
-.btn:hover {
-  background: #ff4da6;
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ffb6d9, #ff66cc);
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  background: #fff5f8;
-  z-index: 1000;
+.btn:hover {
+  transform: scale(1.05);
+  background: #ff4da6;
+  transition: 0.3s;
 }
 
 /* ANIMATION */
@@ -86,7 +162,6 @@ nav {
 }
 
 </style>
-}
 </head>
 
 <body>
@@ -116,14 +191,13 @@ nav {
   <h3>About</h3>
   <div class="line"></div>
   <div class="card">
-  <p><b>Student ID:</b> 2415330016</p>
-  <p><b>Date of Birth:</b> January 29, 2006</p>
-  <p><b>Interest:</b> Learning languages, listening to music</p>
-  <p><b>Goal:</b> Becoming a Data Analyst in the future</p>
-
-  <p><b>Personality:</b> INTP – Logical, independent, and curious thinker</p>
-  <p><b>Zodiac:</b> Aquarius – Creative, independent, and forward-thinking</p>
-</div>
+    <p><b>Student ID:</b> 2415330016</p>
+    <p><b>Date of Birth:</b> January 29, 2006</p>
+    <p><b>Interest:</b> Learning languages, listening to music</p>
+    <p><b>Goal:</b> Becoming a Data Analyst in the future</p>
+    <p><b>Personality:</b> INTP – Logical, independent, and curious thinker</p>
+    <p><b>Zodiac:</b> Aquarius – Creative, independent, and forward-thinking</p>
+  </div>
 </section>
 
 <section id="skills">
@@ -137,7 +211,7 @@ nav {
     <div class="tag">Google Sheets</div>
     <div class="tag">PowerPoint</div>
     <div class="tag">English (IELTS 6.5)</div>
-    <div class="tag">Chinese (HSK basic)</div>
+    <div class="tag">Chinese (HSK Basic)</div>
     <div class="tag">Communication</div>
     <div class="tag">Teaching</div>
     <div class="tag">Problem Solving</div>
@@ -160,8 +234,10 @@ nav {
     <p>📱 0824290106</p>
     <p>📧 hoangduong290106@gmail.com</p>
 
-   <a class="link" href="https://www.instagram.com/hg_dwngst" target="_blank">Instagram →</a>
-<a class="link" href="https://www.facebook.com" target="_blank">Facebook →</a>
+    <a class="link" href="https://www.instagram.com/hg_dwngst" target="_blank">Instagram →</a>
+    <a class="link" href="https://www.facebook.com/share/18JvRjfetn/?mibextid=wwXIfr" target="_blank">Facebook →</a>
+
+    <a class="btn" href="#">💼 Download CV</a>
   </div>
 </section>
 
