@@ -4,66 +4,151 @@
 <meta charset="UTF-8">
 <title>Princess Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Poppins';
-  background: linear-gradient(135deg, #ffc0cb, #ff9de2, #ff66cc);
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffc1e3);
+  color: #ff4da6;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: #ff66cc;
+}
+
+nav a {
   color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-h1 {
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
   font-family: 'Pacifico';
-  font-size: 40px;
+  font-size: 48px;
 }
 
-.profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #ff66cc;
+/* PROFILE */
+.profile {
   margin-top: 20px;
 }
 
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid white;
+  box-shadow: 0 0 30px #ff66cc;
+  object-fit: cover;
+}
+
+/* SECTION */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* CARD */
 .card {
   background: white;
-  color: #ff3399;
-  margin: 20px;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+h2 {
+  margin-bottom: 15px;
+}
+
+/* TAG */
+.tag {
+  display: inline-block;
+  background: #ff66cc;
+  color: white;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
   padding: 20px;
-  border-radius: 15px;
+  background: #ff66cc;
+  color: white;
+  margin-top: 30px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Hoàng Thuỳ Dương 👑</h1>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<div class="profile">
-  <img src="avatar.jpg">
-</div>
+<header>
+  <h1>👑 Hoàng Thuỳ Dương 💗</h1>
 
-<div class="card">
-  <p>Mã SV: 2415330016</p>
-  <p>Ngày sinh: 29-01-2006</p>
-</div>
+  <div class="profile">
+    <img src="https://via.placeholder.com/180">
+  </div>
 
-<div class="card">
-  <p>Sở thích: Học ngoại ngữ, nghe nhạc</p>
-</div>
+  <p>✨ Princess Data Girl ✨</p>
+</header>
 
-<div class="card">
-  <p>IELTS | HSK</p>
-  <p>Dạy Toán | Dạy Tiếng Anh</p>
-</div>
+<section id="about">
+  <div class="card">
+    <h2>💖 About Me</h2>
+    <p><b>Mã SV:</b> 2415330016</p>
+    <p><b>Ngày sinh:</b> 29-01-2006</p>
+    <p><b>Sở thích:</b> Học ngoại ngữ, nghe nhạc</p>
+  </div>
+</section>
 
-<div class="card">
-  <p>📱 0824290106</p>
-  <p>📧 hoangduong290106@gmail.com</p>
-</div>
+<section id="skills">
+  <div class="card">
+    <h2>🎀 Skills</h2>
+    <div class="tag">IELTS</div>
+    <div class="tag">HSK</div>
+    <div class="tag">Dạy Toán</div>
+    <div class="tag">Dạy Tiếng Anh</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>📞 Contact</h2>
+    <p>📱 0824290106</p>
+    <p>📧 hoangduong290106@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  💗 Made with love by Duong 👑
+</footer>
 
 </body>
 </html>
