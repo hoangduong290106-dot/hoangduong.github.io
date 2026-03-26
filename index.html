@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Duong Portfolio</title>
@@ -17,6 +17,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: #fff5f8;
   color: #333;
+  line-height: 1.6;
 }
 
 /* NAV */
@@ -37,6 +38,11 @@ nav a {
   color: #555;
 }
 
+nav a:hover {
+  color: #ff4da6;
+  transition: 0.3s;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -46,13 +52,13 @@ header {
   padding: 80px 20px;
 }
 
-/* ẢNH */
+/* PROFILE */
 .profile img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffb6d9;
+  border: 3px solid #ffd6e7;
 }
 
 /* TEXT */
@@ -69,7 +75,7 @@ header {
 section {
   max-width: 800px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 /* LINE */
@@ -96,7 +102,13 @@ section {
   font-size: 14px;
 }
 
-/* LINK */
+.tag:hover {
+  background: #ffb6d9;
+  color: white;
+  transition: 0.3s;
+}
+
+/* LINKS */
 a.link {
   display: block;
   margin: 5px 0;
@@ -119,26 +131,24 @@ a.link {
 </nav>
 
 <header>
-
-  <!-- 👉 CHỖ ĐỂ ẢNH -->
   <div class="profile">
     <img src="avatar.jpg">
   </div>
 
   <div class="intro">
-    <h1>Hoàng Thuỳ Dương</h1>
-    <p>Future Data Analyst</p>
+    <h1>Hoang Thuy Duong</h1>
+    <p>Future Data Analyst ✨</p>
   </div>
-
 </header>
 
 <section id="about">
   <h3>About</h3>
   <div class="line"></div>
   <div class="card">
-    <p>Mã SV: 2415330016</p>
-    <p>Ngày sinh: 29-01-2006</p>
-    <p>Sở thích: Học ngoại ngữ, nghe nhạc</p>
+    <p><b>Student ID:</b> 2415330016</p>
+    <p><b>Date of Birth:</b> January 29, 2006</p>
+    <p><b>Interest:</b> Learning languages, listening to music</p>
+    <p><b>Goal:</b> Becoming a Data Analyst in the future</p>
   </div>
 </section>
 
@@ -148,8 +158,8 @@ a.link {
   <div class="card">
     <div class="tag">IELTS</div>
     <div class="tag">HSK</div>
-    <div class="tag">Dạy Toán</div>
-    <div class="tag">Dạy Tiếng Anh</div>
+    <div class="tag">Math Tutoring</div>
+    <div class="tag">English Teaching</div>
   </div>
 </section>
 
@@ -157,8 +167,8 @@ a.link {
   <h3>Experience</h3>
   <div class="line"></div>
   <div class="card">
-    <p>• Gia sư Toán cho học sinh cấp 2</p>
-    <p>• Dạy Tiếng Anh cơ bản</p>
+    <p>• Math tutor for secondary school students</p>
+    <p>• Basic English teaching experience</p>
   </div>
 </section>
 
@@ -169,9 +179,8 @@ a.link {
     <p>📱 0824290106</p>
     <p>📧 hoangduong290106@gmail.com</p>
 
-    <!-- 👉 LINK MXH -->
-    <a class="link" href="#">Instagram</a>
-    <a class="link" href="#">Facebook</a>
+    <a class="link" href="https://instagram.com/yourusername">📸 Instagram</a>
+    <a class="link" href="https://facebook.com/yourusername">📘 Facebook</a>
   </div>
 </section>
 
