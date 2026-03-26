@@ -7,90 +7,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #fff5f8;
+  background: linear-gradient(135deg, #fff5f8, #ffe4ec);
   color: #333;
-  line-height: 1.6;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-  border-bottom: 1px solid #ffd6e7;
-}
-
-nav h2 {
-  color: #ff4da6;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-}
-
-nav a:hover {
-  color: #ff4da6;
-  transition: 0.3s;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 80px 20px;
-}
-
-.profile img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffd6e7;
-}
-
-.intro h1 {
-  font-size: 36px;
-}
-
-.intro p {
-  margin-top: 10px;
-  color: #777;
-}
-
-section {
-  max-width: 800px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-.line {
-  width: 40px;
-  height: 3px;
-  background: #ffb6d9;
-  margin: 10px 0 20px;
-}
-
+/* CARD */
 .card {
   background: white;
   padding: 25px;
   border-radius: 20px;
   margin-bottom: 25px;
   box-shadow: 0 8px 20px rgba(255, 182, 217, 0.3);
-  .card:hover {
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+/* HOVER */
+.card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
 }
 
+/* TITLE */
+h3 {
+  font-size: 22px;
+  color: #ff4da6;
+}
+
+/* TAG */
 .tag {
   display: inline-block;
   border: 1px solid #ffb6d9;
@@ -101,26 +54,38 @@ section {
   font-size: 14px;
 }
 
-.tag:hover {
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
   background: #ffb6d9;
   color: white;
-  transition: 0.3s;
-}
-
-a.link {
-  display: block;
-  margin: 5px 0;
-  color: #ff4da6;
+  border-radius: 10px;
   text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
+.btn:hover {
+  background: #ff4da6;
 }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: #fff5f8;
+  z-index: 1000;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 </style>
-  h3 {
-  font-size: 22px;
-  color: #ff4da6;
 }
 </head>
 
