@@ -8,6 +8,7 @@
 
 <style>
 
+/* BASE */
 html {
   scroll-behavior: smooth;
 }
@@ -28,6 +29,7 @@ nav {
   position: sticky;
   top: 0;
   background: #fff5f8;
+  z-index: 10;
 }
 
 nav h2 {
@@ -45,16 +47,38 @@ nav a:hover {
   transition: 0.3s;
 }
 
-/* HEADER */
-header {
+/* HERO (HEADER + BACKGROUND FLOWER) */
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 60px 20px;
+  padding: 80px 20px;
+
+  background-image: url("hinh-nen-hoa-hong-1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-/* 👇 AVATAR NHỎ LẠI Ở ĐÂY */
+/* lớp mờ */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 245, 248, 0.75);
+}
+
+/* nội dung nổi lên */
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* AVATAR */
 .profile img {
   width: 120px;
   height: 120px;
@@ -135,24 +159,6 @@ a.link {
   text-decoration: none;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: linear-gradient(45deg, #ffb6d9, #ff66cc);
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  background: #ff4da6;
-  transition: 0.3s;
-}
-
 /* ANIMATION */
 @keyframes fadeIn {
   to {
@@ -176,16 +182,17 @@ a.link {
   </div>
 </nav>
 
-<header>
+<!-- HERO -->
+<div class="hero">
   <div class="profile">
     <img src="thuyduong-ima.jpg">
   </div>
 
   <div class="intro">
     <h1>Hoang Thuy Duong</h1>
-    <p>✨ Future Data Analyst | Language Lover 💗</p>
+    <p>✨ Future Data Analyst | INTP | Aquarius 💗</p>
   </div>
-</header>
+</div>
 
 <section id="about">
   <h3>About</h3>
@@ -195,8 +202,8 @@ a.link {
     <p><b>Date of Birth:</b> January 29, 2006</p>
     <p><b>Interest:</b> Learning languages, listening to music</p>
     <p><b>Goal:</b> Becoming a Data Analyst in the future</p>
-    <p><b>Personality:</b> INTP – Logical, independent, and curious thinker</p>
-    <p><b>Zodiac:</b> Aquarius – Creative, independent, and forward-thinking</p>
+    <p><b>Personality:</b> INTP – Logical, independent, curious</p>
+    <p><b>Zodiac:</b> Aquarius – Creative & forward-thinking</p>
   </div>
 </section>
 
@@ -206,15 +213,10 @@ a.link {
   <div class="card">
     <div class="tag">SQL (Basic)</div>
     <div class="tag">Data Analysis</div>
-    <div class="tag">Data Cleaning</div>
-    <div class="tag">Microsoft Excel</div>
+    <div class="tag">Excel</div>
     <div class="tag">Google Sheets</div>
-    <div class="tag">PowerPoint</div>
-    <div class="tag">English (IELTS 6.5)</div>
-    <div class="tag">Chinese (HSK Basic)</div>
-    <div class="tag">Communication</div>
-    <div class="tag">Teaching</div>
-    <div class="tag">Problem Solving</div>
+    <div class="tag">English</div>
+    <div class="tag">Chinese</div>
   </div>
 </section>
 
@@ -222,8 +224,8 @@ a.link {
   <h3>Experience</h3>
   <div class="line"></div>
   <div class="card">
-    <p>• Math tutor for secondary school students</p>
-    <p>• Basic English teaching experience</p>
+    <p>• Math tutor</p>
+    <p>• Basic English teaching</p>
   </div>
 </section>
 
@@ -236,7 +238,6 @@ a.link {
 
     <a class="link" href="https://www.instagram.com/hg_dwngst" target="_blank">Instagram →</a>
     <a class="link" href="https://www.facebook.com/share/18JvRjfetn/?mibextid=wwXIfr" target="_blank">Facebook →</a>
-
   </div>
 </section>
 
