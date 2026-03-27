@@ -9,9 +9,7 @@
 <style>
 
 /* BASE */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -32,9 +30,7 @@ nav {
   z-index: 10;
 }
 
-nav h2 {
-  color: #ff4da6;
-}
+nav h2 { color: #ff4da6; }
 
 nav a {
   margin-left: 20px;
@@ -44,10 +40,9 @@ nav a {
 
 nav a:hover {
   color: #ff4da6;
-  transition: 0.3s;
 }
 
-/* HERO (HEADER + BACKGROUND FLOWER) */
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
@@ -61,18 +56,14 @@ nav a:hover {
   position: relative;
 }
 
-/* lớp mờ */
+/* overlay */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(255, 245, 248, 0.75);
 }
 
-/* nội dung nổi lên */
 .hero > div {
   position: relative;
   z-index: 1;
@@ -80,8 +71,8 @@ nav a:hover {
 
 /* AVATAR */
 .profile img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffb6d9;
@@ -94,13 +85,8 @@ nav a:hover {
 }
 
 /* TEXT */
-.intro h1 {
-  font-size: 30px;
-}
-
-.intro p {
-  color: #777;
-}
+.intro h1 { font-size: 30px; }
+.intro p { color: #777; }
 
 /* SECTION */
 section {
@@ -110,10 +96,7 @@ section {
 }
 
 /* TITLE */
-h3 {
-  font-size: 22px;
-  color: #ff4da6;
-}
+h3 { color: #ff4da6; }
 
 .line {
   width: 40px;
@@ -128,16 +111,12 @@ h3 {
   padding: 25px;
   border-radius: 20px;
   margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(255, 182, 217, 0.3);
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s forwards;
+  box-shadow: 0 8px 20px rgba(255,182,217,0.3);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.01);
-  transition: 0.3s;
+  transform: translateY(-8px);
 }
 
 /* TAG */
@@ -159,25 +138,19 @@ a.link {
   text-decoration: none;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <h2>Duong 💗</h2>
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#exp">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -191,53 +164,89 @@ a.link {
   <div class="intro">
     <h1>Hoang Thuy Duong</h1>
     <p>✨ Future Data Analyst | INTP | Aquarius 💗</p>
+    <p>“Curious mind exploring data & languages.”</p>
   </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
   <h3>About</h3>
   <div class="line"></div>
+
   <div class="card">
+    <p>🎯 Aspiring Data Analyst passionate about data & insights.</p>
+    <p>📊 Interested in SQL, Excel, Data Cleaning.</p>
+    <p>🌱 Always improving communication & problem solving.</p>
     <p><b>Student ID:</b> 2415330016</p>
-    <p><b>Date of Birth:</b> January 29, 2006</p>
-    <p><b>Interest:</b> Learning languages, listening to music</p>
-    <p><b>Goal:</b> Becoming a Data Analyst in the future</p>
-    <p><b>Personality:</b> INTP – Logical, independent, curious</p>
-    <p><b>Zodiac:</b> Aquarius – Creative & forward-thinking</p>
+    <p><b>DOB:</b> 29/01/2006</p>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <h3>Skills</h3>
   <div class="line"></div>
+
   <div class="card">
     <div class="tag">SQL (Basic)</div>
     <div class="tag">Data Analysis</div>
     <div class="tag">Excel</div>
     <div class="tag">Google Sheets</div>
-    <div class="tag">English</div>
-    <div class="tag">Chinese</div>
+    <div class="tag">PowerPoint</div>
+    <div class="tag">English IELTS 6.5</div>
+    <div class="tag">Chinese Basic</div>
+    <div class="tag">Communication</div>
+    <div class="tag">Problem Solving</div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="exp">
   <h3>Experience</h3>
   <div class="line"></div>
+
   <div class="card">
-    <p>• Math tutor</p>
-    <p>• Basic English teaching</p>
+    <h4>👩‍🏫 Tutor Experience</h4>
+    <p>• Math tutor for secondary students</p>
+    <p>• Improved student problem-solving skills</p>
+
+    <hr>
+
+    <h4>📚 Language Practice</h4>
+    <p>• English communication (IELTS 6.5)</p>
+    <p>• Basic Chinese learning</p>
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <h3>Projects</h3>
+  <div class="line"></div>
+
+  <div class="card">
+    <h4>📊 Data Learning Journey</h4>
+    <p>• Practiced SQL queries</p>
+    <p>• Learned Excel data cleaning</p>
+
+    <hr>
+
+    <h4>🌱 Self Improvement</h4>
+    <p>• Daily learning habit</p>
+    <p>• Communication & data practice</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h3>Contact</h3>
   <div class="line"></div>
+
   <div class="card">
     <p>📱 0824290106</p>
     <p>📧 hoangduong290106@gmail.com</p>
 
-    <a class="link" href="https://www.instagram.com/hg_dwngst" target="_blank">Instagram →</a>
-    <a class="link" href="https://www.facebook.com/share/18JvRjfetn/?mibextid=wwXIfr" target="_blank">Facebook →</a>
+    <a class="link" href="https://instagram.com" target="_blank">Instagram →</a>
+    <a class="link" href="https://facebook.com" target="_blank">Facebook →</a>
   </div>
 </section>
 
